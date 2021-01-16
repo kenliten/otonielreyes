@@ -1,0 +1,37 @@
+@import '../../../var.less';
+
+.sidebar {
+    background-color: @main-background-color;
+    position: fixed;
+    border-top: 1px solid #f8f8f8;
+    color: #fff;
+    padding: 8px;
+    top: 64px;
+    left: 0;
+    bottom: 0;
+    width: 20%;
+
+    .menu {
+
+        .option {
+            display: block;
+            margin: 4px 0;
+            color: #f8f8f8;
+
+            a {
+                display: block;
+                padding: 8px;
+                color: inherit;
+            }
+
+            &:hover {
+                background-color: #212121;
+            }
+
+            &.active-true {
+                background-color: #f8f8f8;
+                color: #444;
+            }
+        }
+    }
+}
