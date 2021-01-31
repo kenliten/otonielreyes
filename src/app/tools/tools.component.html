@@ -1,0 +1,20 @@
+<mat-card-title>Otoniel Reyes</mat-card-title>
+<mat-card-subtitle>Tools I work with</mat-card-subtitle>
+<mat-divider></mat-divider>
+<mat-card-content>
+  <br>
+  <mat-grid-list cols="3" rowHeight="1:1">
+    <mat-grid-tile *ngFor="let tool of currentSet">
+      <mat-card>
+        <img mat-card-img src="{{tool.img}}" alt="{{tool.name}}">
+        <mat-card-content>
+          <p>{{tool.name}}</p>
+        </mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-paginator (page)="show($event)" [length]="items.length"
+                [pageSize]="6"
+                [pageSizeOptions]="[6]">
+  </mat-paginator>
+</mat-card-content>

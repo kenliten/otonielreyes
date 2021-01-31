@@ -1,0 +1,8 @@
+<h2 mat-dialog-title>{{data.title}}</h2>
+<mat-dialog-content>
+  <p>{{data.description}} <a *ngIf="data.url" mat-raised-button color="link" target="_blank" href="{{data.url}}">Take a Look</a></p>
+  <img src="{{data.img}}" alt="{{data.title}}" mat-card-img>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-flat-button color="primary" (click)="close()">Close</button>
+</mat-dialog-actions>

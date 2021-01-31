@@ -1,0 +1,22 @@
+<br>
+<img mat-card-image src="assets/photo.png">
+<br>
+<mat-card-title>Otoniel Reyes</mat-card-title>
+<mat-card-content>
+  <span (mouseover)="toggleMeaning()">M<i *ngIf="showMeaning">ongoDB/</i>E<i *ngIf="showMeaning">xpressJS/</i>A<i *ngIf="showMeaning">ngular/</i>N<i *ngIf="showMeaning">odeJS</i></span> Stack Developer
+  <div>
+    Social Links:
+  </div>
+  <a 
+    mat-icon-button 
+    [href]="link.url" 
+    [title]="link.title" 
+    *ngFor="let link of links">
+    <i 
+      *ngIf="link.icon !== 'envelope'"
+      class="fab fa-{{link.icon}}"></i>
+    <i 
+      *ngIf="link.icon == 'envelope'" 
+      class="fas fa-envelope"></i>
+  </a>
+</mat-card-content>

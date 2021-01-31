@@ -1,0 +1,19 @@
+<mat-card-title>Otoniel Reyes</mat-card-title>
+<mat-card-subtitle>Skills</mat-card-subtitle>
+<mat-divider></mat-divider>
+<mat-card-content>
+  <mat-list>
+    <ng-container *ngFor="let skill of skills">
+      <mat-list-item class="skill">
+        <mat-toolbar class="toolbar">
+          <mat-icon>{{skill.icon}}</mat-icon>
+          <small>
+            &nbsp;{{skill.name | uppercase}}:
+          </small>
+          <span class="spacer"></span>
+          <mat-progress-bar class="bar" mode="determinate" color="primary" [value]="skill.value"></mat-progress-bar>
+        </mat-toolbar>
+      </mat-list-item>
+    </ng-container>
+  </mat-list>
+</mat-card-content>

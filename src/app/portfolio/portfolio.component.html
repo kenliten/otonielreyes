@@ -1,0 +1,29 @@
+<mat-card-title>Otoniel Reyes</mat-card-title>
+<mat-card-subtitle>Portfolio</mat-card-subtitle>
+<mat-divider></mat-divider>
+<br>
+<mat-card-content>
+  <mat-grid-list cols="2" rowHeight="3:2">
+    <mat-grid-tile *ngFor="let item of currentSet">
+      <mat-card class="card">
+        <img 
+          src="{{item.img}}" 
+          alt="{{item.title}}" 
+          title="{{item.title}} (click to open)" 
+          mat-card-img
+          (click)="openDialog(item)">
+        <mat-card-content>{{item.title}}</mat-card-content>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <mat-paginator (page)="show($event)" 
+                [length]="items.length"
+                [pageSize]="4"
+                [pageSizeOptions]="[4]">
+  </mat-paginator>
+</mat-card-content>
+<a 
+  mat-raised-button 
+  color="primary" 
+  target="_blank"
+  href="https://github.com/kenliten?tab=repositories">View More</a>
